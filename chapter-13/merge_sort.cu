@@ -6,7 +6,7 @@
 #include <random>
 #include "../helper_methods/helpers.h"
 
-#define MAX_THREADS_PER_BLOCK 2
+#define MAX_THREADS_PER_BLOCK 1024
 
 // Error checking macro
 #define CUDA_CHECK(ans) { gpuAssert((ans), __FILE__, __LINE__); }
@@ -78,7 +78,7 @@ void merge_sort_gpu(int *input, int *output, int size) {
 
 
 int main() {
-    int *input, *output, size = 16;
+    int *input, *output, size = 100000000;
     input = (int*)malloc(size * sizeof(int));
     output = (int*)malloc(size * sizeof(int));
 
