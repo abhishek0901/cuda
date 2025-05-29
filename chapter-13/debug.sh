@@ -1,2 +1,2 @@
-nvcc -G -g radix_sort_shared_memory.cu ../helper_methods/parallel_scan.cu -o radix_sort_shared_memory
-cuda-gdb ./radix_sort_shared_memory
+nvcc -G -g merge_sort.cu ../helper_methods/merge.cu -o merge_sort --relocatable-device-code=true
+cuda-gdb ./merge_sort

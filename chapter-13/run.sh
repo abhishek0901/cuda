@@ -1,2 +1,2 @@
-nvcc -o res radix_sort_shared_memory.cu ../helper_methods/parallel_scan.cu
+nvcc -o res merge_sort.cu ../helper_methods/merge.cu --relocatable-device-code=true
 ./res

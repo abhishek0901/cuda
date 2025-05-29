@@ -129,7 +129,7 @@ void radix_sort_gpu(int *input, int *output, int size) {
     int *block_level_bucket_d, *block_level_bucket_exclusive_scan_d;
     cudaMalloc((void**)&block_level_bucket_d, BUCKETS * NUM_BLOCKS * sizeof(int));
     cudaMalloc((void**)&block_level_bucket_exclusive_scan_d, BUCKETS * NUM_BLOCKS * sizeof(int));
-    int iter = 0, *current_ref = input_d;;
+    int iter = 0, *current_ref = input_d;
 
     while (max_val != 0) {
         // Block Level bucket sizes
